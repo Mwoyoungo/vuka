@@ -1,0 +1,358 @@
+/* 
+   Vuka Darkie Manufacturing Stokvel - Responsive Stylesheet
+   Media queries for responsive design
+*/
+
+/* Large Screens */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .about-content, 
+    .strategy-content,
+    .vm-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin-top: 30px;
+    }
+    
+    .stats .container {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    
+    .steps {
+        flex-wrap: wrap;
+    }
+    
+    .step {
+        width: calc(50% - 15px);
+        margin-bottom: 30px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .process-steps {
+        flex-direction: column;
+    }
+    
+    .process-step {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .milestone-timeline {
+        padding-left: 30px;
+    }
+    
+    .milestone-content {
+        padding-left: 20px;
+    }
+    
+    .footer-content {
+        flex-wrap: wrap;
+    }
+    
+    .footer-logo, .footer-links, .footer-contact {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+        max-width: 80px;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        text-align: left;
+        padding: 10px 0;
+        background-color: var(--secondary-color);
+        border-radius: 0 0 0 4px;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 80%;
+        background-color: var(--light-color);
+        padding: 20px;
+        border-radius: 0 0 0 10px;
+        border-left: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .nav-menu li {
+        margin: 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-menu a {
+        color: var(--secondary-color);
+        display: block;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        background-color: rgba(212, 175, 55, 0.1);
+        color: var(--primary-color);
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .hero {
+        padding: 150px 0 80px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .stat-item {
+        width: 100%;
+    }
+    
+    .step {
+        width: 100%;
+    }
+    
+    .testimonial-content {
+        padding: 20px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .details-container {
+        flex-direction: column;
+    }
+    
+    .detail-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Mobile form adjustments */
+    .form-row {
+        flex-direction: column;
+    }
+    
+    /* Mobile document cards */
+    .document-card {
+        padding: 20px;
+        max-width: 100%;
+    }
+    
+    .document-icon {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+    
+    .document-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .document-info p {
+        font-size: 0.85rem;
+    }
+    
+    .form-group {
+        width: 100%;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Mobile page header adjustments */
+    .page-header {
+        padding: 75px 0 20px;
+        margin-top: 0;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .page-header h1::after {
+        width: 50px;
+        height: 2px;
+        bottom: -6px;
+    }
+    
+    /* Mobile header adjustments */
+    .logo {
+        max-width: 80px;
+    }
+    
+    header .container {
+        padding: 0 15px;
+    }
+    
+    .why-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-item {
+        padding-left: 30px;
+    }
+    
+    .timeline-dot {
+        left: 0;
+    }
+    
+    .award-content {
+        flex-direction: column;
+    }
+    
+    .award-image, .award-text {
+        width: 100%;
+    }
+    
+    .award-image {
+        margin-bottom: 30px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        margin-bottom: 20px;
+    }
+    
+    .important-notice {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .notice-icon {
+        margin: 0 auto 20px;
+    }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    .hero {
+        padding: 130px 0 60px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
