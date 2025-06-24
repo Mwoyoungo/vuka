@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/inner-pages.css">
     <link rel="stylesheet" href="css/future-impact.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/home-nav-fix.css">
+    <link rel="stylesheet" href="css/stat-icons-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home-page">
     <!-- Header -->
     <header>
         <div class="container">
@@ -19,9 +21,9 @@
                 <img src="images/logo.png" alt="Vuka Darkie Manufacturing Stokvel Logo">
             </div>
             <nav>
-                <div class="menu-toggle">
+                <button type="button" class="menu-toggle" aria-label="Toggle navigation menu">
                     <i class="fas fa-bars"></i>
-                </div>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -159,7 +161,7 @@
                     <div class="stat-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <div class="stat-value"><strong>1,000</strong></div>
+                    <div class="stat-number">1,000</div>
                     <div class="stat-title">Members by 2027</div>
                     <div class="stat-description">Grow our membership to 1,000 active contributors by December 2027, raising R500,000 monthly</div>
                 </div>
@@ -329,7 +331,52 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/testimonial-slider.js"></script>
+    <script src="js/home-nav-fix.js"></script>
+    <script>
+    // Immediate fix for the navigation menu toggle on the home page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Create a completely new menu toggle button
+        const nav = document.querySelector('nav');
+        const oldMenuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (nav && oldMenuToggle && navMenu) {
+            // Remove the old menu toggle
+            oldMenuToggle.remove();
+            
+            // Create a new menu toggle button
+            const newMenuToggle = document.createElement('button');
+            newMenuToggle.className = 'menu-toggle';
+            newMenuToggle.setAttribute('type', 'button');
+            newMenuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+            newMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            newMenuToggle.style.position = 'absolute';
+            newMenuToggle.style.top = '12px';
+            newMenuToggle.style.right = '20px';
+            newMenuToggle.style.zIndex = '9999';
+            newMenuToggle.style.display = window.innerWidth <= 768 ? 'block' : 'none';
+            
+            // Insert the new menu toggle at the beginning of the nav
+            nav.insertBefore(newMenuToggle, nav.firstChild);
+            
+            // Add click event listener
+            newMenuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('New menu toggle clicked');
+                
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navMenu.style.display = 'none';
+                } else {
+                    navMenu.classList.add('active');
+                    navMenu.style.display = 'flex';
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html>

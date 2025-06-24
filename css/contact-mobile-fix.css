@@ -1,0 +1,62 @@
+/* Contact page mobile fixes */
+
+/* Reset for the page header */
+.page-header-wrapper {
+    display: block;
+    width: 100vw;
+    background-color: #222;
+    position: relative;
+    margin-top: 70px;
+    border-bottom: 3px solid var(--primary-color);
+    left: 0;
+    right: 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.page-header {
+    background-color: transparent !important;
+    margin-top: 0 !important;
+    border-bottom: none !important;
+    padding: 60px 0 25px;
+    width: 100%;
+}
+
+/* Mobile specific fixes */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .page-header-wrapper {
+        margin-top: 60px;
+        width: 100vw !important;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: relative;
+    }
+    
+    .page-header {
+        padding: 40px 0 20px;
+        width: 100%;
+    }
+    
+    /* Fix for the container */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Additional fix for any potential overflow issues */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,57 @@
+/* Special fix for home page navigation menu */
+.home-page header {
+    z-index: 1050 !important;
+}
+
+.home-page .menu-toggle {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1060 !important;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.home-page .menu-toggle:hover,
+.home-page .menu-toggle:focus,
+.home-page .menu-toggle.active {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.home-page .nav-menu {
+    z-index: 1055 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .home-page .menu-toggle {
+        display: block !important;
+    }
+    
+    .home-page .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 80%;
+        background-color: var(--light-color);
+        padding: 20px;
+        border-radius: 0 0 0 10px;
+        border-left: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .home-page .nav-menu.show {
+        display: flex !important;
+        flex-direction: column;
+    }
+}

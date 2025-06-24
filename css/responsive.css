@@ -93,6 +93,14 @@
 
 /* Small Screens (Mobile) */
 @media screen and (max-width: 768px) {
+    /* Fix for page header on mobile */
+    .page-header {
+        padding: 60px 0 20px;
+        margin-top: 60px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
     .container {
         max-width: 540px;
     }
@@ -114,10 +122,24 @@
         right: 20px;
         background-color: var(--secondary-color);
         color: var(--light-color);
-        padding: 5px 10px;
+        padding: 10px 15px;
         border-radius: 4px;
         cursor: pointer;
         z-index: 1001;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .menu-toggle:hover,
+    .menu-toggle:focus,
+    .menu-toggle.active {
+        background-color: var(--primary-color);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        transform: translateY(-2px);
     }
     
     .nav-menu {
@@ -131,10 +153,12 @@
         padding: 10px 0;
         background-color: var(--secondary-color);
         border-radius: 0 0 0 4px;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     
     .nav-menu.active {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         position: absolute;
         top: 70px;

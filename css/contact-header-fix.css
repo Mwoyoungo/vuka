@@ -1,0 +1,84 @@
+/* Fix for contact page header on mobile devices */
+.page-header {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 80px 0 25px;
+    margin-top: 70px;
+    position: relative;
+    border-bottom: 3px solid var(--primary-color);
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: hidden;
+}
+
+/* Force full width for the section */
+section.page-header {
+    width: 100% !important;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Page header wrapper to ensure full width */
+.page-header-wrapper {
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: hidden;
+    margin-top: 70px;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Mobile-specific fixes */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .page-header-wrapper {
+        width: 100% !important;
+        margin-top: 60px;
+        padding: 0;
+        position: relative;
+        left: 0;
+        right: 0;
+    }
+    
+    .page-header {
+        padding: 60px 0 20px;
+        margin-top: 0;
+        width: 100% !important;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        border-bottom: 3px solid var(--primary-color);
+    }
+    
+    .page-header .container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+    }
+}

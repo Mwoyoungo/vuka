@@ -143,18 +143,20 @@ img {
 /* Header Styles */
 header {
     background-color: var(--light-color);
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    border-bottom: 1px solid #eee;
+    box-shadow: var(--shadow);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding: 10px 20px;
 }
 
@@ -165,8 +167,27 @@ header .container {
     align-items: center;
 }
 
+.menu-toggle {
+    display: none; /* Hidden by default, shown in responsive.css for mobile */
+    cursor: pointer;
+    z-index: 1010; /* Higher than other elements */
+    transition: all 0.3s ease;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+    pointer-events: none; /* Ensures clicks go to the parent element */
+}
+
 .nav-menu {
     display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu li {
@@ -247,7 +268,7 @@ header .container {
 /* Stats Section */
 .stats {
     background-color: var(--secondary-color);
-    color: var(--light-color);
+    color: var(--primary-color);
     padding: 50px 0;
 }
 
@@ -264,7 +285,7 @@ header .container {
 
 .stat-item h3 {
     font-size: 2.5rem;
-    color: var(--light-color);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 

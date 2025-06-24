@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/inner-pages.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/contact-banner-fix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -18,9 +19,9 @@
                 <img src="images/logo.png" alt="Vuka Darkie Manufacturing Stokvel Logo">
             </div>
             <nav>
-                <div class="menu-toggle">
+                <button type="button" class="menu-toggle" aria-label="Toggle navigation menu">
                     <i class="fas fa-bars"></i>
-                </div>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -31,12 +32,10 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Contact Us</h1>
-        </div>
-    </section>
+    <!-- Contact Banner with full width fix for mobile -->
+    <div class="contact-banner">
+        <h1>Contact Us</h1>
+    </div>
 
     <!-- Contact Details -->
  
@@ -47,15 +46,15 @@
     <section class="contact-form section-bg-gray">
         <div class="container">
             <div class="section-header">
-                <h2>Get In Touch With Us</h2>
+                <h2>Let's Connect</h2>
                 <div class="divider"></div>
-                <p class="section-subheading">We'd love to hear from you! Send us your questions or inquiries</p>
+                <p class="section-subheading">We're excited to hear from you! Whether you have questions about membership, want to learn more about our initiatives, or simply want to say hello, we're here to help you every step of the way.</p>
             </div>
             
             <div class="contact-wrapper">
                 <div class="contact-info-panel">
                     <div class="contact-info-header">
-                        <h3><i class="fas fa-info-circle"></i> Contact Information</h3>
+                        <h3><i class="fas fa-handshake"></i> Reach Out To Us</h3>
                     </div>
                     <div class="contact-info-content">
                         <div class="contact-info-item">
@@ -92,7 +91,7 @@
                 
                 <div class="form-container">
                     <form id="contactForm" class="gold-bordered-form">
-                        <h3 class="form-title"><i class="far fa-paper-plane"></i> Send Us a Message</h3>
+                        <h3 class="form-title"><i class="far fa-comment-dots"></i> Start a Conversation</h3>
                         
                         <div class="form-section">
                             <div class="form-row">
@@ -120,7 +119,7 @@
                         </div>
                         
                         <div class="form-submit">
-                            <button type="submit" class="cta-button submit-button"><i class="fas fa-paper-plane"></i> Send Message</button>
+                            <button type="submit" class="cta-button submit-button"><i class="fas fa-paper-plane"></i> Send Your Message</button>
                         </div>
                         <p class="form-note">* Required fields</p>
                     </form>

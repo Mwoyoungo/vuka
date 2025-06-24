@@ -1,16 +1,58 @@
 // Vuka Darkie Manufacturing Stokvel - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
+    // Mobile Menu Toggle - Simplified and more robust implementation
+    function setupMobileMenu() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (!menuToggle || !navMenu) {
+            console.error('Menu toggle or nav menu not found');
+            return;
+        }
+        
+        // Make sure the menu toggle is visible on mobile
+        if (window.innerWidth <= 768) {
+            menuToggle.style.display = 'block';
+        }
+        
+        // Clear any existing event listeners (just in case)
+        const newMenuToggle = menuToggle.cloneNode(true);
+        menuToggle.parentNode.replaceChild(newMenuToggle, menuToggle);
+        
+        // Add click event listener to the menu toggle
+        newMenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+            newMenuToggle.classList.toggle('active');
+            console.log('Menu toggled:', navMenu.classList.contains('active'));
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (navMenu.classList.contains('active') && 
+                !newMenuToggle.contains(e.target) && 
+                !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                newMenuToggle.classList.remove('active');
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+                newMenuToggle.classList.remove('active');
+                newMenuToggle.style.display = 'none';
+            } else {
+                newMenuToggle.style.display = 'block';
+            }
         });
     }
+    
+    // Initialize the mobile menu
+    setupMobileMenu();
 
     // FAQ Toggles
     const faqQuestions = document.querySelectorAll('.faq-question');
