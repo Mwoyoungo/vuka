@@ -32,20 +32,25 @@
 
 /* Fix for the missing icons */
 .stat-icon {
-    width: 80px;
-    height: 80px;
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 2rem;
+    width: 80px !important;
+    height: 80px !important;
+    background-color: #d4af37 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 20px !important;
+    font-size: 2rem !important;
+    position: relative !important;
+    z-index: 1 !important;
 }
 
 .stat-icon i {
-    font-size: 2rem;
+    font-size: 2rem !important;
+    color: white !important;
+    display: inline-block !important;
+    line-height: 1 !important;
 }
 
 .stat-number {

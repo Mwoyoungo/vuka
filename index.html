@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/home-nav-fix.css">
     <link rel="stylesheet" href="css/stat-icons-fix.css">
-    <link rel="stylesheet" href="css/icon-fix.css">
+    <link rel="stylesheet" href="css/icon-override.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -126,7 +126,7 @@
         </div>
     </section>
 
-    <!-- Our Progress Section -->
+    <!-- Our Progress Section with inline styles for icons -->
     <section class="stats-section">
         <div class="container">
             <div class="section-header">
@@ -135,32 +135,32 @@
             </div>
             <div class="stats-container">
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-users"></i>
+                    <div style="width: 80px; height: 80px; background-color: #d4af37; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-users" style="font-size: 2rem; color: white;"></i>
                     </div>
                     <div class="stat-number">160+</div>
                     <div class="stat-title">Active Members</div>
                     <div class="stat-description">Growing community of committed investors</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-coins"></i>
+                    <div style="width: 80px; height: 80px; background-color: #d4af37; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-coins" style="font-size: 2rem; color: white;"></i>
                     </div>
                     <div class="stat-number">R500,000+</div>
                     <div class="stat-title">Capital Raised</div>
                     <div class="stat-description">Pooled investment for manufacturing ventures</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-trophy"></i>
+                    <div style="width: 80px; height: 80px; background-color: #d4af37; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-trophy" style="font-size: 2rem; color: white;"></i>
                     </div>
                     <div class="stat-number">1</div>
                     <div class="stat-title">ABSA Award</div>
                     <div class="stat-description">Recognition for innovative community investment</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-users"></i>
+                    <div style="width: 80px; height: 80px; background-color: #d4af37; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-chart-line" style="font-size: 2rem; color: white;"></i>
                     </div>
                     <div class="stat-number">1,000</div>
                     <div class="stat-title">Members by 2027</div>
@@ -335,6 +335,7 @@
     <script src="js/script.js"></script>
     <script src="js/testimonial-slider.js"></script>
     <script src="js/home-nav-fix.js"></script>
+    <script src="js/icon-fix.js"></script>
     <script>
     // Immediate fix for the navigation menu toggle on the home page
     document.addEventListener('DOMContentLoaded', function() {

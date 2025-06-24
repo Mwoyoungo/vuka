@@ -1,0 +1,55 @@
+/* Direct icon override for Progress So Far section */
+
+/* Target the specific icons in the stats section */
+body .stats-section .stats-container .stat-card .stat-icon {
+    width: 80px !important;
+    height: 80px !important;
+    background-color: #d4af37 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 20px !important;
+    position: relative !important;
+    z-index: 1 !important;
+    overflow: visible !important;
+}
+
+body .stats-section .stats-container .stat-card .stat-icon i {
+    font-size: 2rem !important;
+    color: white !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure Font Awesome icons are properly displayed */
+.fas {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Specific icon fixes */
+.fa-users:before {
+    content: "\f0c0" !important;
+}
+
+.fa-coins:before {
+    content: "\f51e" !important;
+}
+
+.fa-trophy:before {
+    content: "\f091" !important;
+}
+
+.fa-chart-line:before {
+    content: "\f201" !important;
+}
+
+/* Force display of icons */
+i[class*="fa-"] {
+    display: inline-block !important;
+    visibility: visible !important;
+}
