@@ -1,0 +1,124 @@
+/* Steps to Join Styles */
+.steps-to-join {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 120px;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.step-content {
+    padding: 25px 25px 25px 85px;
+    flex-grow: 1;
+}
+
+.step-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.step-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.step-content a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.step-content a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.important-note {
+    border-left: 4px solid #f8b500;
+    background-color: rgba(248, 181, 0, 0.05);
+}
+
+.step-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    color: #f8b500;
+    font-size: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .step-card {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        left: 5px;
+    }
+    
+    .step-content {
+        padding: 20px 15px 20px 70px;
+    }
+    
+    .step-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .step-content p {
+        font-size: 0.9rem;
+    }
+    
+    .step-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        left: 5px;
+    }
+}

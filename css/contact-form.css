@@ -1,0 +1,72 @@
+/* Contact Form Feedback Styles */
+.form-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.form-subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+#form-feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#form-feedback.form-success {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid #4CAF50;
+    color: #2e7d32;
+}
+
+#form-feedback.form-error {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-left: 4px solid #F44336;
+    color: #d32f2f;
+}
+
+#form-feedback i {
+    margin-right: 8px;
+}
+
+#form-feedback ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 25px;
+}
+
+#form-feedback ul li {
+    margin-bottom: 5px;
+}
+
+#form-feedback ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Loading spinner animation */
+.fa-spin {
+    animation: fa-spin 2s infinite linear;
+}
+
+@keyframes fa-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Disable button styles */
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
